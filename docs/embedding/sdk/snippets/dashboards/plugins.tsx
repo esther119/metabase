@@ -1,6 +1,5 @@
 import {
   InteractiveDashboard,
-  type MetabasePluginsConfig,
 } from "@metabase/embedding-sdk-react";
 
 const dashboardId = 1;
@@ -50,23 +49,13 @@ const ExampleDefaultActions = () => {
   return <InteractiveDashboard dashboardId={dashboardId} plugins={plugins} />;
 };
 
-// [<snippet example-custom-action-type>]
-type DashCardMenuItem = {
-  iconName: string;
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-};
-// [<endsnippet example-custom-action-type>]
-
 const ExampleCustomActions = () => {
   // [<snippet example-custom-actions>]
-  const plugins: MetabasePluginsConfig = {
+  const plugins = {
     dashboard: {
       dashboardCardMenu: {
         customItems: [
           {
-            iconName: "chevronright",
             label: "Custom action",
             onClick: () => {
               alert(`Custom action clicked`);
@@ -74,7 +63,6 @@ const ExampleCustomActions = () => {
           },
           ({ question }) => {
             return {
-              iconName: "chevronright",
               label: "Custom action",
               onClick: () => {
                 alert(`Custom action clicked ${question?.name}`);
@@ -92,7 +80,7 @@ const ExampleCustomActions = () => {
 
 const ExampleCustomActionsMenu = () => {
   // [<snippet example-custom-actions-menu>]
-  const plugins: MetabasePluginsConfig = {
+  const plugins = {
     dashboard: {
       dashboardCardMenu: ({ question }) => (
         <button onClick={() => console.log(question.name)}>Click me</button>

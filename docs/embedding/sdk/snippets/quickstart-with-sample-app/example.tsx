@@ -1,12 +1,10 @@
 import {
   InteractiveQuestion,
-  type MetabaseAuthConfig,
   MetabaseProvider,
-  type MetabaseTheme,
 } from "@metabase/embedding-sdk-react";
 
-const authConfig = {} as MetabaseAuthConfig;
-const theme = {} as MetabaseTheme;
+const authConfig = {};
+const theme = {};
 
 const questionId = 1;
 

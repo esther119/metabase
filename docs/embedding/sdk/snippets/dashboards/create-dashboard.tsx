@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   CreateDashboardModal,
   EditableDashboard,
-  type MetabaseDashboard,
   useCreateDashboardApi,
 } from "@metabase/embedding-sdk-react";
 
@@ -30,7 +29,7 @@ const ExampleComponent = () => {
   const handleClose = () => {};
 
   // [<snippet example-component>]
-  const [dashboard, setDashboard] = useState<MetabaseDashboard | null>(null);
+  const [dashboard, setDashboard] = useState(null);
 
   if (dashboard) {
     return <EditableDashboard dashboardId={dashboard.id} />;

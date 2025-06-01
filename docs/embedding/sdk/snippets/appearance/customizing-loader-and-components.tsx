@@ -1,4 +1,3 @@
-import type { MetabaseAuthConfig } from "@metabase/embedding-sdk-react";
 // [<snippet imports>]
 import {
   MetabaseProvider,
@@ -6,7 +5,7 @@ import {
 } from "@metabase/embedding-sdk-react";
 // [<endsnippet imports>]
 
-const authConfig = {} as MetabaseAuthConfig;
+const authConfig = {};
 
 const Example = () => {
   return (

@@ -1,10 +1,9 @@
 import {
   InteractiveQuestion,
-  type MetabaseAuthConfig,
   MetabaseProvider,
 } from "@metabase/embedding-sdk-react";
 
-const authConfig = {} as MetabaseAuthConfig;
+const authConfig = {};
 
 const Example = () => {
   // [<snippet example>]
@@ -14,7 +13,6 @@ const Example = () => {
     name: "client-custom-action",
     section: "custom",
     type: "custom",
-    icon: "chevronright",
     title: "Hello from the click app!!!",
     onClick: ({ closePopover }) => {
       alert(`Clicked ${clicked.column?.name}: ${clicked.value}`);

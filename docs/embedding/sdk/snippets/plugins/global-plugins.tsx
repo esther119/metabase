@@ -1,12 +1,10 @@
 import type { PropsWithChildren } from "react";
 import {
-  type MetabaseAuthConfig,
   MetabaseProvider,
-  type MetabaseTheme,
 } from "@metabase/embedding-sdk-react";
 
-const authConfig = {} as MetabaseAuthConfig;
-const theme = {} as MetabaseTheme;
+const authConfig = {};
+const theme = {};
 
 const Example = ({ children }: PropsWithChildren) => (
   // [<snippet example>]
