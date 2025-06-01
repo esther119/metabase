@@ -40,10 +40,9 @@ describe("CollectionBrowser", () => {
     await setup();
 
     await waitFor(() => {
-      expect(screen.getByText("Type")).toBeInTheDocument();
+      expect(screen.getByText("Name")).toBeInTheDocument();
     });
 
-    expect(screen.getByText("Name")).toBeInTheDocument();
     expect(screen.getByText("Last edited by")).toBeInTheDocument();
     expect(screen.getByText("Last edited at")).toBeInTheDocument();
   });
@@ -51,7 +50,7 @@ describe("CollectionBrowser", () => {
   it("should allow to hide certain columns", async () => {
     await setup({
       props: {
-        visibleColumns: ["type", "name"],
+        visibleColumns: ["name", "lastEditedBy"],
       },
     });
 
@@ -67,7 +66,7 @@ describe("CollectionBrowser", () => {
         columnNames.push(el.textContent);
       });
 
-    expect(columnNames).toStrictEqual(["Type", "Name"]);
+    expect(columnNames).toStrictEqual(["Name", "Last edited by"]);
   });
 });
 

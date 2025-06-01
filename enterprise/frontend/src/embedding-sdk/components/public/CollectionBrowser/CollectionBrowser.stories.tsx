@@ -30,10 +30,10 @@ export const Default = {
   },
 };
 
-export const WithTypeAndNameColumn = {
+export const WithNameAndLastEditedByColumn = {
   render: Template,
 
   args: {
-    visibleColumns: ["type", "name"],
+    visibleColumns: ["name", "lastEditedBy"],
   },
 };

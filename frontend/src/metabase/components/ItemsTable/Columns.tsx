@@ -111,36 +111,6 @@ export const Columns = {
       </ItemCell>
     ),
   },
-  Type: {
-    Col: () => <col style={{ width: "70px" }} />,
-    Header: ({
-      sortingOptions,
-      onSortingOptionsChange,
-      title = t`Type`,
-    }: HeaderProps) => (
-      <SortableColumnHeader
-        name="model"
-        sortingOptions={sortingOptions}
-        onSortingOptionsChange={onSortingOptionsChange}
-        style={{ marginInlineStart: 6 }}
-      >
-        {title}
-      </SortableColumnHeader>
-    ),
-    Cell: ({
-      testIdPrefix = "table",
-      icon,
-      isPinned,
-    }: {
-      testIdPrefix?: string;
-      icon: IconProps;
-      isPinned?: boolean;
-    }) => (
-      <ItemCell data-testid={`${testIdPrefix}-type`}>
-        <EntityIconCheckBox variant="list" icon={icon} pinned={isPinned} />
-      </ItemCell>
-    ),
-  },
   Name: {
     Col: ({ isInDragLayer }: { isInDragLayer: boolean }) => (
       <col style={{ width: isInDragLayer ? "10rem" : undefined }} />

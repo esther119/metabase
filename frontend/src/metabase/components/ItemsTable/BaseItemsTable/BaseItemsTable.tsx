@@ -164,7 +164,6 @@ export const BaseItemsTable = ({
       {includeColGroup && (
         <colgroup>
           {canSelect && <Columns.Select.Col />}
-          {visibleColumnsMap["type"] && <Columns.Type.Col />}
           {visibleColumnsMap["name"] && (
             <Columns.Name.Col isInDragLayer={isInDragLayer} />
           )}
@@ -187,12 +186,6 @@ export const BaseItemsTable = ({
                 hasUnselected={hasUnselected}
                 onSelectAll={onSelectAll}
                 onSelectNone={onSelectNone}
-              />
-            )}
-            {visibleColumnsMap["type"] && (
-              <Columns.Type.Header
-                sortingOptions={sortingOptions}
-                onSortingOptionsChange={onSortingOptionsChange}
               />
             )}
             {visibleColumnsMap["name"] && (
