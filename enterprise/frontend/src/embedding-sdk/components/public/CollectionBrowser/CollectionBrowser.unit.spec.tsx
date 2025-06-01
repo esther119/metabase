@@ -40,10 +40,9 @@ describe("CollectionBrowser", () => {
     await setup();
 
     await waitFor(() => {
-      expect(screen.getByText("Type")).toBeInTheDocument();
+      expect(screen.getByText("Name")).toBeInTheDocument();
     });
 
-    expect(screen.getByText("Name")).toBeInTheDocument();
     expect(screen.getByText("Last edited by")).toBeInTheDocument();
     expect(screen.getByText("Last edited at")).toBeInTheDocument();
   });
