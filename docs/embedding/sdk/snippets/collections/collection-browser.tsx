@@ -1,4 +1,3 @@
-import React from "react";
 import { CollectionBrowser } from "@metabase/embedding-sdk-react";
 
 export default function App() {
@@ -14,6 +13,8 @@ export default function App() {
       pageSize={10}
       // Define the collection item types you want to be visible
       visibleEntityTypes={["dashboard", "question", "collection"]}
+      // Hide the type column which shows icons
+      visibleColumns={["name", "lastEditedBy", "lastEditedAt"]}
     />
   );
 }
