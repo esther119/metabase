@@ -60,13 +60,6 @@ export const DefaultItemRenderer = ({
           handleSelectionToggled={handleSelectionToggled}
         />
       )}
-      {visibleColumnsMap["type"] && (
-        <Columns.Type.Cell
-          testIdPrefix={testIdPrefix}
-          icon={icon}
-          isPinned={isPinned}
-        />
-      )}
       {visibleColumnsMap["name"] && (
         <Columns.Name.Cell
           item={item}

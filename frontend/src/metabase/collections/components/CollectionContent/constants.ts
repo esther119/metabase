@@ -3,7 +3,6 @@ import type { CollectionItemModel } from "metabase-types/api";
 export const COLLECTION_PAGE_SIZE = 25;
 
 export const COLLECTION_CONTENT_COLUMNS = [
-  "type",
   "name",
   "lastEditedBy",
   "lastEditedAt",

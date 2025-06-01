@@ -40,7 +40,6 @@ export type CollectionBrowserListColumns =
   | "lastEditedAt";
 
 const COLLECTION_BROWSER_LIST_COLUMNS: CollectionBrowserListColumns[] = [
-  "type",
   "name",
   "lastEditedBy",
   "lastEditedAt",
