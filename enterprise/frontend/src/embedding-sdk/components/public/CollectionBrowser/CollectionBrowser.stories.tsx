@@ -30,10 +30,10 @@ export const Default = {
   },
 };
 
-export const WithTypeAndNameColumn = {
+export const WithNameColumnOnly = {
   render: Template,
 
   args: {
-    visibleColumns: ["type", "name"],
+    visibleColumns: ["name"],
   },
 };
